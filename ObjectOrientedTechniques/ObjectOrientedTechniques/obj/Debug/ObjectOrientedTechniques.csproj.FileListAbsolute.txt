@@ -1,0 +1,8 @@
+C:\C#\ObjectOrientedTechniques\ObjectOrientedTechniques\bin\Debug\ObjectOrientedTechniques.exe.config
+C:\C#\ObjectOrientedTechniques\ObjectOrientedTechniques\bin\Debug\ObjectOrientedTechniques.exe
+C:\C#\ObjectOrientedTechniques\ObjectOrientedTechniques\bin\Debug\ObjectOrientedTechniques.pdb
+C:\C#\ObjectOrientedTechniques\ObjectOrientedTechniques\obj\Debug\ObjectOrientedTechniques.csproj.AssemblyReference.cache
+C:\C#\ObjectOrientedTechniques\ObjectOrientedTechniques\obj\Debug\ObjectOrientedTechniques.csproj.SuggestedBindingRedirects.cache
+C:\C#\ObjectOrientedTechniques\ObjectOrientedTechniques\obj\Debug\ObjectOrientedTechniques.csproj.CoreCompileInputs.cache
+C:\C#\ObjectOrientedTechniques\ObjectOrientedTechniques\obj\Debug\ObjectOrientedTechniques.exe
+C:\C#\ObjectOrientedTechniques\ObjectOrientedTechniques\obj\Debug\ObjectOrientedTechniques.pdb

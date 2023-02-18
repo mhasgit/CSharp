@@ -1,0 +1,15 @@
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\bin\Debug\net6.0\ValuesAndRefrenceTypes.exe
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\bin\Debug\net6.0\ValuesAndRefrenceTypes.deps.json
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\bin\Debug\net6.0\ValuesAndRefrenceTypes.runtimeconfig.json
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\bin\Debug\net6.0\ValuesAndRefrenceTypes.dll
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\bin\Debug\net6.0\ValuesAndRefrenceTypes.pdb
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ValuesAndRefrenceTypes.csproj.AssemblyReference.cache
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ValuesAndRefrenceTypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ValuesAndRefrenceTypes.AssemblyInfoInputs.cache
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ValuesAndRefrenceTypes.AssemblyInfo.cs
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ValuesAndRefrenceTypes.csproj.CoreCompileInputs.cache
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ValuesAndRefrenceTypes.dll
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\refint\ValuesAndRefrenceTypes.dll
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ValuesAndRefrenceTypes.pdb
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ValuesAndRefrenceTypes.genruntimeconfig.cache
+C:\C#\DataTypesAndVariables\ValuesAndRefrenceTypes\obj\Debug\net6.0\ref\ValuesAndRefrenceTypes.dll

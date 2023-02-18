@@ -1,0 +1,15 @@
+C:\C#\DataTypesAndVariables\typeConversions\bin\Debug\net6.0\typeConversions.exe
+C:\C#\DataTypesAndVariables\typeConversions\bin\Debug\net6.0\typeConversions.deps.json
+C:\C#\DataTypesAndVariables\typeConversions\bin\Debug\net6.0\typeConversions.runtimeconfig.json
+C:\C#\DataTypesAndVariables\typeConversions\bin\Debug\net6.0\typeConversions.dll
+C:\C#\DataTypesAndVariables\typeConversions\bin\Debug\net6.0\typeConversions.pdb
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\typeConversions.csproj.AssemblyReference.cache
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\typeConversions.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\typeConversions.AssemblyInfoInputs.cache
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\typeConversions.AssemblyInfo.cs
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\typeConversions.csproj.CoreCompileInputs.cache
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\typeConversions.dll
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\refint\typeConversions.dll
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\typeConversions.pdb
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\typeConversions.genruntimeconfig.cache
+C:\C#\DataTypesAndVariables\typeConversions\obj\Debug\net6.0\ref\typeConversions.dll

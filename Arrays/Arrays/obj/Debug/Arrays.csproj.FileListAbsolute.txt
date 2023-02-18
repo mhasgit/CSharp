@@ -1,0 +1,8 @@
+C:\C#\Arrays\Arrays\bin\Debug\Arrays.exe.config
+C:\C#\Arrays\Arrays\bin\Debug\Arrays.exe
+C:\C#\Arrays\Arrays\bin\Debug\Arrays.pdb
+C:\C#\Arrays\Arrays\obj\Debug\Arrays.csproj.AssemblyReference.cache
+C:\C#\Arrays\Arrays\obj\Debug\Arrays.csproj.SuggestedBindingRedirects.cache
+C:\C#\Arrays\Arrays\obj\Debug\Arrays.csproj.CoreCompileInputs.cache
+C:\C#\Arrays\Arrays\obj\Debug\Arrays.exe
+C:\C#\Arrays\Arrays\obj\Debug\Arrays.pdb

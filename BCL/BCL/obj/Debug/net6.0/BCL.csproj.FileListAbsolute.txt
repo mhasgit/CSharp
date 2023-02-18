@@ -1,0 +1,15 @@
+C:\C#\BCL\BCL\bin\Debug\net6.0\BCL.exe
+C:\C#\BCL\BCL\bin\Debug\net6.0\BCL.deps.json
+C:\C#\BCL\BCL\bin\Debug\net6.0\BCL.runtimeconfig.json
+C:\C#\BCL\BCL\bin\Debug\net6.0\BCL.dll
+C:\C#\BCL\BCL\bin\Debug\net6.0\BCL.pdb
+C:\C#\BCL\BCL\obj\Debug\net6.0\BCL.csproj.AssemblyReference.cache
+C:\C#\BCL\BCL\obj\Debug\net6.0\BCL.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\BCL\BCL\obj\Debug\net6.0\BCL.AssemblyInfoInputs.cache
+C:\C#\BCL\BCL\obj\Debug\net6.0\BCL.AssemblyInfo.cs
+C:\C#\BCL\BCL\obj\Debug\net6.0\BCL.csproj.CoreCompileInputs.cache
+C:\C#\BCL\BCL\obj\Debug\net6.0\BCL.dll
+C:\C#\BCL\BCL\obj\Debug\net6.0\refint\BCL.dll
+C:\C#\BCL\BCL\obj\Debug\net6.0\BCL.pdb
+C:\C#\BCL\BCL\obj\Debug\net6.0\BCL.genruntimeconfig.cache
+C:\C#\BCL\BCL\obj\Debug\net6.0\ref\BCL.dll

@@ -1,0 +1,15 @@
+C:\C#\parenthesisProblem\parenthesisProblem\bin\Debug\net6.0\parenthesisProblem.exe
+C:\C#\parenthesisProblem\parenthesisProblem\bin\Debug\net6.0\parenthesisProblem.deps.json
+C:\C#\parenthesisProblem\parenthesisProblem\bin\Debug\net6.0\parenthesisProblem.runtimeconfig.json
+C:\C#\parenthesisProblem\parenthesisProblem\bin\Debug\net6.0\parenthesisProblem.dll
+C:\C#\parenthesisProblem\parenthesisProblem\bin\Debug\net6.0\parenthesisProblem.pdb
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\parenthesisProblem.csproj.AssemblyReference.cache
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\parenthesisProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\parenthesisProblem.AssemblyInfoInputs.cache
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\parenthesisProblem.AssemblyInfo.cs
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\parenthesisProblem.csproj.CoreCompileInputs.cache
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\parenthesisProblem.dll
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\refint\parenthesisProblem.dll
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\parenthesisProblem.pdb
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\parenthesisProblem.genruntimeconfig.cache
+C:\C#\parenthesisProblem\parenthesisProblem\obj\Debug\net6.0\ref\parenthesisProblem.dll

@@ -1,0 +1,15 @@
+C:\C#\WorkingWithStrings\WorkingWithStrings\bin\Debug\net6.0\WorkingWithStrings.exe
+C:\C#\WorkingWithStrings\WorkingWithStrings\bin\Debug\net6.0\WorkingWithStrings.deps.json
+C:\C#\WorkingWithStrings\WorkingWithStrings\bin\Debug\net6.0\WorkingWithStrings.runtimeconfig.json
+C:\C#\WorkingWithStrings\WorkingWithStrings\bin\Debug\net6.0\WorkingWithStrings.dll
+C:\C#\WorkingWithStrings\WorkingWithStrings\bin\Debug\net6.0\WorkingWithStrings.pdb
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\WorkingWithStrings.csproj.AssemblyReference.cache
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\WorkingWithStrings.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\WorkingWithStrings.AssemblyInfoInputs.cache
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\WorkingWithStrings.AssemblyInfo.cs
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\WorkingWithStrings.csproj.CoreCompileInputs.cache
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\WorkingWithStrings.dll
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\refint\WorkingWithStrings.dll
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\WorkingWithStrings.pdb
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\WorkingWithStrings.genruntimeconfig.cache
+C:\C#\WorkingWithStrings\WorkingWithStrings\obj\Debug\net6.0\ref\WorkingWithStrings.dll

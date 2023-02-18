@@ -1,0 +1,15 @@
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.exe
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.deps.json
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.runtimeconfig.json
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.dll
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\bin\Debug\net6.0\DataTypesAndVariables.pdb
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.csproj.AssemblyReference.cache
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.AssemblyInfoInputs.cache
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.AssemblyInfo.cs
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.csproj.CoreCompileInputs.cache
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.dll
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\refint\DataTypesAndVariables.dll
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.pdb
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\DataTypesAndVariables.genruntimeconfig.cache
+C:\C#\DataTypesAndVariables\DataTypesAndVariables\obj\Debug\net6.0\ref\DataTypesAndVariables.dll
