@@ -21,6 +21,7 @@
             MemoryStream mStream = new MemoryStream();
 
             TextReader textReader = null;
+            TextWriter textWriter = null;
 
             StreamReader streamReader = null;
             StreamWriter streamWriter = null;
