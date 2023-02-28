@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace ExceptionHandling
 {
@@ -13,7 +14,58 @@ namespace ExceptionHandling
     {
         static void Main(string[] args)
         {
-            SimpleCatch();
+            do
+            {
+                Console.WriteLine("A. No Error Handling");
+                Console.WriteLine("B. Simple Catch");
+                Console.WriteLine("C. Error Bubbling");
+                Console.WriteLine("D. Which Exception");
+                Console.WriteLine("E. Multiple Exception");
+                Console.WriteLine("F. Throw Exception");
+                Console.WriteLine("G. Test Finally");
+                Console.WriteLine("G. Test Using");
+                Console.WriteLine("I. User-defined Exception");
+                Console.WriteLine();
+
+                char input;
+                Console.Write("Enter your choice: ");
+                input = Convert.ToChar(Console.Read());
+                switch (Char.ToUpper(input))
+                {
+                    case 'A':
+                        NoErrorHandling();
+                        break;
+                    case 'B':
+                        SimpleCatch();
+                        break;
+                    case 'C':
+                        ErrorBubbling();
+                        break;
+                    case 'D':
+                        WhichException();
+                        break;
+                    case 'E':
+                        MultipleException();
+                        break;
+                    case 'F':
+                        ThrowException();
+                        break;
+                    case 'G':
+                        TestFinally();
+                        break;
+                    case 'H':
+                        TestUsing();
+                        break;
+                    case 'I':
+                        UserDefinedException();
+                        break;
+
+                    default:
+                        Console.WriteLine("Wrong Input! try again.......");
+                        break;
+                }
+            } while (true);
+           
         }
 
         private static void NoErrorHandling()
@@ -167,6 +219,125 @@ namespace ExceptionHandling
                 // if the exception isn't related to I/O
                 // And that shouldn't happen
                 throw;
+            }
+        }
+
+        private static void ThrowException()
+        {
+            try
+            {
+                TestThrow();
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Error occurred:" + ex.Message);
+                try
+                {
+                    Console.WriteLine(ex.InnerException.Message);
+                }
+                catch (Exception)
+                {
+                    // Do nothing.
+                }
+            }
+        }
+
+        private static void TestThrow()
+        {
+            string fileName = GetFileName();
+
+            // No matter what happens, throw back
+            // a FileNotFoundException.
+            try
+            {
+                FileStream fs = File.Open(fileName, FileMode.Open);
+                long fileSize = fs.Length;
+                Console.WriteLine("'{0}' is {1} bytes", fileName, fileSize);
+                fs.Close();
+            }
+            catch (Exception ex)
+            {
+                throw (new FileNotFoundException("Unable to open the specific file.", ex));
+            }
+        }
+
+        private static void TestFinally()
+        {
+            // Run Finally block to run code no
+            // matter what else happens.
+
+           FileStream fs = null;
+            DriveInfo di = new DriveInfo("C:\\");
+
+            try
+            {
+                string fileName = GetFileName();
+                fs = File.Open(fileName, FileMode.Open);
+                long fileSize = fs.Length;
+                long copies = di.TotalSize / fileSize;
+                Console.WriteLine("'{0}' is {1} bytes. " + "You can have {2} of these on the drive.", fileName, fileSize, copies);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            finally
+            {
+                // Run this code no matter what happens.
+                if (fs != null)
+                {
+                    fs.Close();
+                }
+            }
+        }
+            private static void TestUsing()
+            {
+                try
+                {
+                    string fileName = GetFileName();
+                    using (FileStream fs = File.Open(fileName, FileMode.Open))
+                    {
+                        long fileSize = fs.Length;
+                        Console.WriteLine("'{0}' is {1} bytes. ", fileName, fileSize);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+        private static void UserDefinedException()
+        {
+            // Test a user-defined exception
+
+            try
+            {
+                string fileName = GetFileName();
+                long fileSize = GetSize(fileName);
+            }
+            catch (FileTooLargeException ex)
+            {
+                Console.WriteLine("Please select a smaller file! " + "The file you selected was {0}", ex.FileSize);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private static long GetSize(string FileName)
+        {
+            using (FileStream fs = File.Open(FileName, FileMode.Open))
+            {
+                long filesize = fs.Length;
+                if (filesize > 100)
+                {
+                    throw (new FileTooLargeException("The file you selected is too large.", null, filesize));
+                }
+                return filesize;
             }
         }
     }
