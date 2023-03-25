@@ -24,7 +24,7 @@ namespace InputOutputStreams
             this.index = new Dictionary<int, long>();
         }
 
-        public Person Get(int id)
+        public Person3 Get(int id)
         {
             long position = index[id];
             fileStream.Seek(position, SeekOrigin.Begin);
@@ -43,10 +43,10 @@ namespace InputOutputStreams
             MemoryStream stream = new MemoryStream(recordBuffer);
             IFormatter formatter = new BinaryFormatter();
 
-            Person person;
+            Person3 person;
             try
             {
-                person = (Person)formatter.Deserialize(stream);
+                person = (Person3)formatter.Deserialize(stream);
             }
             catch (Exception)
             {
@@ -57,7 +57,7 @@ namespace InputOutputStreams
             return person;
         }
 
-        public int Insert(Person person)
+        public int Insert(Person3 person)
         {
             if (person == null) throw new ArgumentNullException();
             // if (person.Id < 0) throw new ArgumentOutOfRangeException();
@@ -74,12 +74,12 @@ namespace InputOutputStreams
             throw new NotImplementedException();
         }
 
-        public int Update(Person person)
+        public int Update(Person3 person)
         {
             throw new NotImplementedException();
         }
 
-        public int Delete(Person person)
+        public int Delete(Person3 person)
         {
             throw new NotImplementedException();
         }
