@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +13,36 @@ namespace StreamPractice
     {
         static void Main(string[] args)
         {
-            WorkingWithFileClass();
+            Random random = new Random();
+            Student student = new Student();
+
+            Console.Write("Enter student name: ");
+            student.Name = Console.ReadLine();
+
+            Console.Write("Enter father name: ");
+            student.FatherName = Console.ReadLine();
+
+            student.Age = random.Next(0, 20);
+
+            Console.Write("Enter Address: ");
+            student.Address = Console.ReadLine();
+
+            string path = @"C:\Student.txt";
+
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                student.WriteStudent(sw);
+                //sw.WriteLine(student.Name);
+                //sw.WriteLine(student.FatherName);
+                //sw.WriteLine(student.Age);
+                //sw.WriteLine(student.Address);
+            }
+
+            using (StreamReader sr = File.OpenText(path))
+            {
+                Console.WriteLine(sr.ReadToEnd());
+                
+            }
         }
         
         //static void WorkingWithBinaryClass()
@@ -77,6 +108,8 @@ namespace StreamPractice
                 }
             }
         }
+
+        
 
     }
 }
