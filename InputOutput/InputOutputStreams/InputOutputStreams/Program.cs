@@ -36,7 +36,8 @@
                 DateOfBirth = DateTime.Now.AddYears(-21)
             };
 
-            Person[] people = new Person[] {
+            Person[] people = new Person[] 
+            {
                 person,
                 new Person
                 {
@@ -167,6 +168,7 @@
             // Stream stream = null; 
             // FileStream stream1 = null;
             // MemoryStream stream2 = new MemoryStream();
+
             // BufferedStream bufferedStream = null;
 
             // byte[] memoryBuffer = new byte[1024];
