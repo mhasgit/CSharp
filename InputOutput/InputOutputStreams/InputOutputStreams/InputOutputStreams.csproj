@@ -45,8 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ByteArrayStream.cs" />
-    <Compile Include="Con.cs" />
     <Compile Include="FileIOBasics.cs" />
+    <Compile Include="MyCon.cs" />
     <Compile Include="PeopleDatabase.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Person3.cs" />
