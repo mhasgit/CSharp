@@ -10,7 +10,6 @@
     {
         static void Main2(string[] args)
         {
-
             Person person = new Person()
             {
                 Age = 21,

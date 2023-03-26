@@ -41,13 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinaryFileViewer.cs" />
+    <Compile Include="BinarySerializer\FileSerializer.cs" />
     <Compile Include="FileTransferTool.cs" />
-    <Compile Include="IBinarySerializable.cs" />
+    <Compile Include="BinarySerializer\IBinarySerializable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BinarySerializer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,7 +15,18 @@
     {
         static void Main(string[] args)
         {
-            TestFileSerializer();
+            TestBinaryFileViewer();
+        }
+
+        public static void TestBinaryFileViewer()
+        {
+            while (true)
+            {
+                string filePath = Console.ReadLine();
+
+                Console.Clear();
+                BinaryFileViewer.ViewFile(filePath);
+            }
         }
 
         private static void TestFileSerializer()
