@@ -1,10 +1,11 @@
 ﻿namespace InputOutputStreams
 {
+    using InputOutputTools;
     using System;
     using System.IO;
 
     [Serializable]
-    public class Person
+    public class Person : IBinarySerializable
     {
         public int Age { get; set; }
 
@@ -35,6 +36,25 @@
             this.Age = int.Parse(personData[0]);
             this.Name = personData[1];
             this.DateOfBirth = DateTime.Parse(personData[2]);
+        }
+
+        public void Read(BinaryReader reader)
+        {
+            this.Age = reader.ReadInt32();
+            this.Name = reader.ReadString();
+            int year = reader.ReadInt32();
+            int month = reader.ReadInt32();
+            int day = reader.ReadInt32();
+            this.DateOfBirth = new DateTime(year, month, day);
+        }
+
+        public void Write(BinaryWriter writer)
+        {
+            writer.Write(this.Age);
+            writer.Write(this.Name);
+            writer.Write(this.DateOfBirth.Year);
+            writer.Write(this.DateOfBirth.Month);
+            writer.Write(this.DateOfBirth.Day);
         }
     }
 

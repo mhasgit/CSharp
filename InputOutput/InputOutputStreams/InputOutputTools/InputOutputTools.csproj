@@ -42,7 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileTransferTool.cs" />
+    <Compile Include="IBinarySerializable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BinarySerializer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

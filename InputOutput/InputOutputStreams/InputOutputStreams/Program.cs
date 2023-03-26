@@ -15,6 +15,29 @@
     {
         static void Main(string[] args)
         {
+            TestFileSerializer();
+        }
+
+        private static void TestFileSerializer()
+        {
+            // Write Object
+            Student student = new Student
+            {
+                Id = 1,
+                Name = "Test",
+                Address = "Random Address"
+            };
+
+            FileSerializer<Student> fileSerializer = new FileSerializer<Student>("student.bin");
+            fileSerializer.WriteObject(student);
+
+            // Read Object
+            Student studentFromFile = fileSerializer.ReadObject();
+            Console.WriteLine(studentFromFile.Name);
+        }
+
+        private static void UseFileTransferTool()
+        {
             Console.Write("Src File Path: ");
             string srcFilePath = Console.ReadLine();
             Console.Write("Dest File Path: ");
@@ -39,17 +62,31 @@
 
         private static string ReadPassword()
         {
+            Console.Write("Enter your password: ");
+
             StringBuilder sb = new StringBuilder();
             while (true)
             {
-                ConsoleKeyInfo k = Console.ReadKey(true);
-                if (k.Key == ConsoleKey.Enter)
+                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
+                if (keyInfo.Key == ConsoleKey.Enter)
                 {
                     break;
                 }
-
-                sb.Append(k.KeyChar);
+                else if (keyInfo.Key == ConsoleKey.Backspace && sb.Length > 0)
+                {
+                    sb.Remove(sb.Length - 1, 1);
+                    Console.Write("\b \b");
+                }
+                else if (keyInfo.KeyChar != '\u0000' && keyInfo.Key != ConsoleKey.Backspace)
+                {
+                    sb.Append(keyInfo.KeyChar);
+                    Console.Write("*");
+                }
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Your password is: " + sb);
 
             return sb.ToString();
         }
