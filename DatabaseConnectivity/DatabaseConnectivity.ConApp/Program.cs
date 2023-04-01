@@ -8,43 +8,114 @@ using System.Diagnostics;
 using System.Data;
 using System.Security;
 using System.Configuration;
+using DatabaseConnectivity.Library;
 
 namespace DatabaseConnectivity.ConApp
 {
-
-    public class Employee
-    {
-        public int EmployeeId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-    }
-
-    public class EmployeeMapper
-    {
-        public static Employee MapEmployee(SqlDataReader reader)
-        {
-            var employee = new Employee();
-
-            employee.EmployeeId = (int)reader["EmployeeId"];
-            employee.FirstName = (string)reader["FirstName"];
-            employee.LastName = (string)reader["LastName"];
-            employee.Email = (string)reader["Email"];
-            employee.Phone = (string)reader["Phone"];
-
-            return employee;
-        }
-    }
-
     internal class Program
     {
         static void Main(string[] args)
         {
+            string[] functions = new string[]
+            {
+                nameof(BasicConnectivity),
+                nameof(DDLAndDMLBasics),
+                nameof(EmployeeMapperExample),
+                nameof(DisconnectedADO)
+            };
+
+            int selectedIndex = 0;
+            while (true)
+            {
+                Console.Clear();
+
+                for (int i = 0; i <= functions.Length - 1; i++)
+                {
+                    if (i == selectedIndex)
+                    {
+                        Console.Write("> ");
+                    }
+                    else
+                    {
+                        Console.Write("  ");
+                    }
+
+                    Console.WriteLine(functions[i]);
+                }
+
+                ConsoleKeyInfo keyPressed = Console.ReadKey(true);
+
+                switch (keyPressed.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        selectedIndex--;
+                        if (selectedIndex < 0)
+                        {
+                            selectedIndex = functions.Length - 1;
+                        }
+                        break;
+
+                    case ConsoleKey.DownArrow:
+                        selectedIndex++;
+                        if (selectedIndex >= functions.Length)
+                        {
+                            selectedIndex = 0;
+                        }
+                        break;
+                    case ConsoleKey.Enter:
+                        Console.Clear();
+                        string selectedFunction = functions[selectedIndex];
+                        ExecuteFunction(selectedFunction);
+                        Console.ReadKey(true);
+                        break;
+                }
+            }
+        }
+
+        private static void ExecuteFunction(string function)
+        {
+            switch (function)
+            {
+                case nameof(BasicConnectivity):
+                    BasicConnectivity();
+                    break;
+                case nameof(DDLAndDMLBasics):
+                    DDLAndDMLBasics();
+                    break;
+                case nameof(EmployeeMapperExample):
+                    EmployeeMapperExample();
+                    break;
+                case nameof(DisconnectedADO):
+                    DisconnectedADO();
+                    break;
+            }
+        }
+
+
+        private static void DisconnectedADO()
+        {
+            DataTable dt = new DataTable();
+            DataSet dataSet = new DataSet();
+            using (SqlConnection connection = ConnectionHelper.GetSqlConnection(ConfigurationManager.ConnectionStrings["SQL2022"].ConnectionString))
+            {
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    // SELECT * FROM Locations;
+                    command.CommandText = "SELECT * FROM Employees;";
+                    SqlDataAdapter sqlAdapter = new SqlDataAdapter(command);
+
+                    sqlAdapter.Fill(dt);
+                }
+                // SqlDataAdapter sqlAdapter = new SqlDataAdapter("SELECT * FROM Employees", connection);
+            }
+        }
+
+        private static void EmployeeMapperExample()
+        {
             List<Employee> employees = new List<Employee>();
 
             string connectionString = ConfigurationManager.ConnectionStrings["SQL2022"].ConnectionString;
-            using (SqlConnection connection = GetSqlConnection(connectionString))
+            using (SqlConnection connection = ConnectionHelper.GetSqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -77,15 +148,13 @@ namespace DatabaseConnectivity.ConApp
                 }
 
             }
-
-
         }
 
         private static void DDLAndDMLBasics()
         {
-            SqlConnection connection = GetSqlConnection("Data Source=localhost;Initial Catalog=master;");
+            SqlConnection connection = ConnectionHelper.GetSqlConnection("Data Source=localhost;Initial Catalog=master;");
             connection.Open();
-
+            string sql = "INSERT INTO TABLE VALUES(); SELECT SCOPE_IDENTITY();";
             SqlCommand command = connection.CreateCommand();
             command.CommandText = @"IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'TEST2') CREATE DATABASE TEST2";
             int rowsAffected = command.ExecuteNonQuery();
@@ -132,44 +201,22 @@ namespace DatabaseConnectivity.ConApp
             connection.Close();
         }
 
-        private static SqlConnection GetSqlConnection(string connectionString, bool useCredentials = true)
-        {
-            if (useCredentials)
-            {
-                SecureString secureString = GetSecureString("P@ssw0rd");
-                SqlCredential credential = new SqlCredential("sa", secureString);
-                return new SqlConnection(connectionString, credential);
-            }
-
-            return new SqlConnection(connectionString);
-        }
-
-        private static SecureString GetSecureString(string password)
-        {
-            SecureString secureString = new SecureString();
-            for (int i = 0; i < password.Length; i++)
-            {
-                secureString.AppendChar(password[i]);
-            }
-            secureString.MakeReadOnly();
-            return secureString;
-        }
-
         private static void BasicConnectivity()
         {
-            SqlConnectionStringBuilder cb = new SqlConnectionStringBuilder();
-
-            cb.DataSource = ".";
-            cb.InitialCatalog = "master";
-            cb.IntegratedSecurity = true;
             // string connectionString = "Data Source=.;Initial Catalog=master;User=Hassan;Password=P@ssWord;Intergrated Security=True;MultipleActiveResultSets=True;SSPI=True";
-            cb.ApplicationName = "DatabaseConnectivity";
+            SqlConnectionStringBuilder cb = new SqlConnectionStringBuilder
+            {
+                DataSource = ".",
+                InitialCatalog = "master",
+                IntegratedSecurity = true,
+                ApplicationName = "DatabaseConnectivity"
+            };
 
             Console.WriteLine(cb.ConnectionString);
 
             Debugger.Break();
 
-            using (SqlConnection connection = new SqlConnection(cb.ConnectionString))
+            using (SqlConnection connection = ConnectionHelper.GetSqlConnection(cb.ConnectionString))
             {
                 connection.Open();
 
