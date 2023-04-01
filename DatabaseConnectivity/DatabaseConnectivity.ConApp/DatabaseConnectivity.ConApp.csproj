@@ -53,5 +53,11 @@
   <ItemGroup>
     <Content Include="Scripts\Database.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseConnectivity.Library\DatabaseConnectivity.Library.csproj">
+      <Project>{977c5108-5c9d-471b-8b1e-154270f6348e}</Project>
+      <Name>DatabaseConnectivity.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
