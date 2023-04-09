@@ -95,6 +95,17 @@ namespace CollectionsAndLinq
             LinqRemaining(ints);
         }
 
+        private static void IntSwapWithoutTemp()
+        {
+            int a = 3, b = 7;
+            Console.WriteLine("Before Swap: a = {0}, b = {1}", a, b);
+            b = b - a;
+            a = a + b;
+            b = a - b;
+            Console.WriteLine("After Swap: a = {0}, b = {1}", a, b);
+            Debugger.Break();
+        }
+
         private static void LinqRemaining(IEnumerable<int> enumeralbe)
         {
             enumeralbe.Any(x => x % 2 == 0);
