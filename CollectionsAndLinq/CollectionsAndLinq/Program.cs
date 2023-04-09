@@ -1,16 +1,192 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Data.Linq;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CollectionsAndLinq
 {
+    #region Linq Types
+    // Delegates
+    delegate void ProcessInt(int value); // Action<int>
+
+    delegate void ProcessNumbers(int a, int b); // Action<int, int>
+
+    delegate int ProcessInts(int a, int b); // Func<int, int, int>
+
+    // Extension Methods
+    public static class IntExtensions
+    {
+        public static DateTime March(this int day, int year)
+        {
+            return new DateTime(year, 3, day);
+        }
+    }
+
+    public static class EnumerableExtensions
+    {
+        public static int MyMax(this IEnumerable<int> list)
+        {
+            int max = -1;
+            foreach (int item in list)
+            {
+                if (item > max)
+                {
+                    max = item;
+                }
+            }
+
+            return max;
+        }
+
+        public static int Count(this IEnumerable<int> list)
+        {
+            int count = 0;
+            foreach (int item in list)
+            {
+                count++;
+            }
+
+            return count;
+        }
+
+        public static int Average(this IEnumerable<int> list)
+        {
+            int count = 0;
+            int sum = 0;
+            foreach (int item in list)
+            {
+                count++;
+                sum += item;
+            }
+
+            return sum / count;
+        }
+
+        public static bool MyAll<T>(this IEnumerable<T> list, Func<T, bool> predicate)
+        {
+            foreach (T item in list)
+            {
+                if (predicate(item) == false)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
+    #endregion
+
+    // Linq to Objects
+    // Linq to SQL
+    // Linq to XML
+    // Linq to anything
     internal class Program
     {
         static void Main(string[] args)
+        {
+            List<int> list = new List<int>();
+            Dictionary<int, string> d = new Dictionary<int, string>();
+            int[] ints = { 1, 2, 3 };
+            LinqRemaining(ints);
+        }
+
+        private static void LinqRemaining(IEnumerable<int> enumeralbe)
+        {
+            enumeralbe.Any(x => x % 2 == 0);
+            var nums = enumeralbe.Select(i => new { Number = i, Squared = i * i });
+        }
+
+        #region Linq Basics
+
+        static void DisplayInt(int value)
+        {
+            Console.WriteLine(value);
+        }
+
+        static void SquareInt(int value)
+        {
+            Console.WriteLine(value * value);
+        }
+
+        static void AddInts(int a, int b)
+        {
+            Console.WriteLine(a + b);
+        }
+
+        private static void LinqBasics()
+        {
+            // Extension Methods
+
+            // Anonymous Types
+            var person = new
+            {
+                FirstName = "Muhammad",
+                LastName = "Hassan",
+                Age = 24
+            };
+
+            // Delegates & Lambda Expressions
+            ProcessInt funcDelegate = DisplayInt;
+            funcDelegate.Invoke(3);
+
+            funcDelegate = SquareInt;
+            funcDelegate(5);
+
+            // Inline anonymous delegate
+            ProcessInts alwaysOneFunc = delegate { return 1; };
+            ProcessInts alwaysOneFuncLambda = (a, b) => 1;
+
+            ProcessInts add = delegate (int a, int b) { return a + b; };
+            ProcessInts addLambda = (a, b) => a + b;
+            int sum = add(3, 7);
+
+            ProcessInt squareLambda = x => Console.WriteLine(x * x);
+
+            ProcessNumbers processNumFunc = (a, b) => Console.WriteLine(a + b);
+
+            Action writeAction = () => Console.WriteLine();
+            Action<int> intAction = (x) => Console.WriteLine(x);
+
+            Func<int> intFunc = () => 1;
+            Func<int, int, int> addFunc = (x, y) => x + y;
+
+
+            List<int> list = new List<int>();
+            // list.ConvertAll(delegate (int x) { return x.ToString(); });
+            var converted = list.ConvertAll(x => new Person { Age = x });
+            var listSquared = list.ConvertAll(x => x * x);
+            IEnumerable<int> enumerable = list;
+
+            if (list.All(i => i > 0))
+            {
+
+            }
+
+            DateTime dob = new DateTime(1999, 3, 1);
+            DateTime db = 1.March(1999);
+            // IntExtensions.March(1, 1999);
+        }
+
+        List<Person> ConvertAll(List<int> list, Converter<int, Person> ageConverter)
+        {
+            var people = new List<Person>();
+            foreach (var item in list)
+            {
+                people.Add(ageConverter(item));
+            }
+
+            return people;
+        }
+
+        #endregion
+
+        #region Collection Basics
+        private static void CollectionsBasic()
         {
             // List<T>
             List<string> days = new List<string>();
@@ -50,12 +226,12 @@ namespace CollectionsAndLinq
             dict[3] = "Hussain Ahmad";
             Console.WriteLine(dict[3]);
 
-            if(dict.TryGetValue(3, out string name))
+            if (dict.TryGetValue(3, out string name))
             {
                 Console.WriteLine(name);
             }
 
-            Dictionary<string, List<string>> studentSubjects = new Dictionary<string, List<string>>();
+            var studentSubjects = new Dictionary<string, List<string>>();
             List<string> studentSubjectsList = new List<string>()
             {
                 "AOA", "ADS", "DCS"
@@ -83,7 +259,7 @@ namespace CollectionsAndLinq
                 Console.WriteLine(day);
             }
 
-            foreach(string day in days)
+            foreach (string day in days)
             {
                 Console.WriteLine(day);
             }
@@ -121,134 +297,12 @@ namespace CollectionsAndLinq
             }
 
             Debugger.Break();
-
         }
 
         static bool IsEvenNumber(int number)
         {
             return number % 2 == 0;
         }
-    }
-
-
-    class MyCollection<T> : IEnumerable<T>, IEnumerable, IEnumerator<T>
-    {
-        int currentIndex = 0;
-        T[] array = new T[10];
-
-        public void Initilize(T[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                this.array[i] = array[i];
-            }
-        }
-
-        public IEnumerator<T> GetEnumerator()
-        {
-            //foreach (T item in array)
-            //{
-            //    yield return item;
-            //}
-
-            return this;
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return this;
-        }
-
-        // IEnumerator<T>
-        public T Current {
-            get
-            {
-                return this.array[currentIndex++];
-            }
-        }
-
-        public bool MoveNext()
-        {
-            if(currentIndex < array.Length)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public void Reset()
-        {
-            currentIndex = 0;
-        }
-
-        public void Dispose()
-        {
-        }
-
-        object IEnumerator.Current => throw new NotImplementedException();
-    }
-
-    class Person { }
-
-
-    class Node
-    {
-        public Node Next { get; set; }
-        public string Item { get; set; }
-    }
-
-    class LinkList 
-    {
-        private Node head;
-        private Node tail;
-
-        public void AddFirst(Node node)
-        {
-            node.Next = head;
-            head = node;
-        }
-
-        public void AddLast(Node node)
-        {
-            tail.Next = node;
-            tail = tail.Next;
-        }
-
-        public void Add(string item)
-        {
-            Node node = new Node();
-            node.Item = item;
-
-            this.AddNode(node);
-        }
-
-        private void AddNode(Node node)
-        {
-            if(head == null)
-            {
-                head = node;
-            }
-            //else
-            //{
-            //    Node prev = head;
-            //    Node next = head;
-            //    while(next != null)
-            //    {
-            //        prev = next;
-            //        next = next.Next;
-            //    }
-
-            //    prev.Next = node;
-            //    tail = node;
-            //}
-
-            tail.Next = node;
-            tail = tail.Next;
-        }
-
-
+        #endregion
     }
 }
