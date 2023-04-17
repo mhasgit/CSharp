@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 using System.Threading.Tasks;
+using InputOutputTools;
+using InputOutputStream;
+using InputOutputTools.BinarySerializer;
 
 namespace PracticeGround
 {
@@ -15,9 +18,101 @@ namespace PracticeGround
     {
         static void Main(string[] args)
         {
-           
+            TestBinaryFileViewer();
         }
 
+        #region File IO
+        public static void TestBinaryFileViewer()
+        {
+            while (true)
+            {
+                string filePath = Console.ReadLine();
+
+                Console.Clear();
+                BinaryFileViewer.ViewFile(filePath);
+            }
+        }
+
+        private static void TestSerializer()
+        {
+
+            Student student = new Student()
+            {
+                Id = 12,
+                Name = "Ali",
+                Address = "Kohat"
+            };
+
+            // Write
+            FileSerializer<Student> fileSerializer = new FileSerializer<Student>("student.bin");
+            fileSerializer.WriteObject(student);
+
+            // Read
+            Student studentFromFile = fileSerializer.ReadObject();
+            Console.WriteLine(studentFromFile.Name);
+
+
+        }
+
+        private static void UseFileTransferTool()
+        {
+            Console.WriteLine("Src File Path");
+            string srcFilePath = Console.ReadLine();
+            Console.WriteLine("Dest File Path");
+            string destFilePath = Console.ReadLine();
+
+            FileTransferTool fileTransferTool = new FileTransferTool(srcFilePath, destFilePath);
+
+            Console.WriteLine("Press enter to start file transfer");
+            Console.ReadKey();
+
+            fileTransferTool.Start();
+
+            //fileTransferTool.Pause();
+            //fileTransferTool.Resume();
+            //fileTransferTool.Cancel();
+
+            Console.WriteLine("File Transfer Completed");
+            Console.ReadKey();
+
+        }
+
+        private static string ReadPassword()
+        {
+            Console.WriteLine("Enter your password");
+
+            StringBuilder sb = new StringBuilder();
+
+            while (true)
+            {
+                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
+                if (keyInfo.Key == ConsoleKey.Enter)
+                {
+                    break;
+                }
+                else if (keyInfo.Key == ConsoleKey.Backspace && sb.Length > 0)
+                {
+                    sb.Remove(sb.Length - 1, 1);
+                    Console.WriteLine("\b \b");
+                }
+                else if (keyInfo.KeyChar != '\u0000' && keyInfo.Key != ConsoleKey.Backspace)
+                {
+                    sb.Append(keyInfo.KeyChar);
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Your password is: " + sb);
+
+            }
+            return sb.ToString();
+        }
+
+        #endregion
+
+
+        #region ADO.Net
         private static void BasicConnectivity()
         {
             SqlConnectionStringBuilder cb = new SqlConnectionStringBuilder()
@@ -156,5 +251,7 @@ namespace PracticeGround
                 //SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Employees", connection);
             }
         }
+
+        #endregion
     }
 }

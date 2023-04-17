@@ -55,9 +55,13 @@
       <Project>{a4e3170a-1954-4911-96bf-58415176852a}</Project>
       <Name>DataBaseConnectivity.Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FileTransferTool.Library\FileTransferTool.Library.csproj">
-      <Project>{9ff5e4da-c360-434e-9d1a-f10592d025c9}</Project>
-      <Name>FileTransferTool.Library</Name>
+    <ProjectReference Include="..\InputOutputStream\InputOutputStream.csproj">
+      <Project>{6ba4827a-8f06-4603-926f-e9622d092fdf}</Project>
+      <Name>InputOutputStream</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InputOutputTools\InputOutputTools.csproj">
+      <Project>{94888409-937a-45ab-8c17-fff94998aee5}</Project>
+      <Name>InputOutputTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

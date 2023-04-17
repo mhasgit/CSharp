@@ -19,7 +19,7 @@
             streamWriter.Write(this.Age);
             streamWriter.Write('|');
             streamWriter.Write(this.Name);
-            streamWriter.Write("|");
+            streamWriter.Write('|');
             streamWriter.WriteLine(this.DateOfBirth); // .ToString("dd/MM/yyyy"))
         }
 

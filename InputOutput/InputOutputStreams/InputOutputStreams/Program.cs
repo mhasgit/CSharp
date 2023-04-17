@@ -16,6 +16,7 @@
         static void Main(string[] args)
         {
             TestBinaryFileViewer();
+            
         }
 
         public static void TestBinaryFileViewer()
@@ -78,6 +79,7 @@
             StringBuilder sb = new StringBuilder();
             while (true)
             {
+                
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
 
                 if (keyInfo.Key == ConsoleKey.Enter)
@@ -88,7 +90,7 @@
                 {
                     sb.Remove(sb.Length - 1, 1);
                     Console.Write("\b \b");
-                }
+               }
                 else if (keyInfo.KeyChar != '\u0000' && keyInfo.Key != ConsoleKey.Backspace)
                 {
                     sb.Append(keyInfo.KeyChar);

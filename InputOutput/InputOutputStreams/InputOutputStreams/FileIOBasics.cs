@@ -17,7 +17,8 @@
                 DateOfBirth = DateTime.Now.AddYears(-21)
             };
 
-            Person[] people = new Person[] {
+            Person[] people = new Person[] 
+            {
                 person,
                 new Person
                 {
@@ -67,7 +68,7 @@
             {
                 Console.Write(p.Age);
                 Console.Write(" ");
-                Console.WriteLine(p.Name);
+                Console.Write(p.Name);
                 Console.Write(" ");
                 Console.WriteLine(p.DateOfBirth);
             }
@@ -149,23 +150,23 @@
         {
             /*******************************************/
 
-            // Byte-oriented IO
-            // Character-oriented IO
+            // Byte - oriented IO
+            // Character - oriented IO
 
-            // Stream stream = null; 
-            // FileStream stream1 = null;
-            // MemoryStream stream2 = new MemoryStream();
-            // BufferedStream bufferedStream = null;
+            //Stream stream = null;
+            //FileStream stream1 = null;
+            //MemoryStream stream2 = new MemoryStream();
+            //BufferedStream bufferedStream = null;
 
-            // byte[] memoryBuffer = new byte[1024];
-            // MemoryStream mStream = new MemoryStream();
+            //byte[] memoryBuffer = new byte[1024];
+            //MemoryStream mStream = new MemoryStream();
 
-            // TextReader textReader = null;
-            // TextWriter textWriter = null;
+            //TextReader textReader = null;
+            //TextWriter textWriter = null;
 
-            // StreamReader streamReader = new StreamReader();
-            // StreamWriter streamWriter = null;
-            // StringWriter writer = new StringWriter();
+            //StreamReader streamReader = new StreamReader("");
+            //StreamWriter streamWriter = null;
+            //StringWriter writer = new StringWriter();
         }
     }
 
