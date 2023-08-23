@@ -1,3 +1,4 @@
+using Microsoft.VisualBasic.Devices;
 using System.Net;
 
 namespace Networking
@@ -30,6 +31,11 @@ namespace Networking
             IPHostEntry hostEntry = Dns.GetHostByName(hostName);
             this.textBox2.Text = hostEntry.AddressList[0].ToString();
             //IPAddress.Loopback;
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

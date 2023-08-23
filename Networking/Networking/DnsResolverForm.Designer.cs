@@ -32,16 +32,18 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             button1 = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(56, 41);
+            label1.Location = new Point(70, 49);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(106, 20);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "Domain Name";
+            label1.Click += label1_Click_1;
             // 
             // textBox1
             // 
@@ -59,24 +61,34 @@
             // 
             // button1
             // 
-            button1.Location = new Point(550, 83);
+            button1.Location = new Point(541, 83);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 3;
-            button1.Text = "button1";
+            button1.Text = "IP Lookup";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // DnsResolver
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(74, 160);
+            label2.Name = "label2";
+            label2.Size = new Size(21, 20);
+            label2.TabIndex = 4;
+            label2.Text = "IP";
+            // 
+            // DnsResolverForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Name = "DnsResolver";
+            Name = "DnsResolverForm";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
@@ -88,5 +100,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Button button1;
+        private Label label2;
     }
 }
