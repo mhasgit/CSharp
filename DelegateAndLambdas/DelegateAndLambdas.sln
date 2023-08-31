@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingSynchronization", "ThreadingSynchronization\ThreadingSynchronization.csproj", "{C1A0E919-F402-442F-9879-4F9DE1B837AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateAndLambdas", "DelegateAndLambdas\DelegateAndLambdas.csproj", "{7F05188C-8B01-4FA6-B727-B05A557EAF16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C1A0E919-F402-442F-9879-4F9DE1B837AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1A0E919-F402-442F-9879-4F9DE1B837AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1A0E919-F402-442F-9879-4F9DE1B837AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1A0E919-F402-442F-9879-4F9DE1B837AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F05188C-8B01-4FA6-B727-B05A557EAF16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F05188C-8B01-4FA6-B727-B05A557EAF16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F05188C-8B01-4FA6-B727-B05A557EAF16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F05188C-8B01-4FA6-B727-B05A557EAF16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A4896846-E2EF-4D78-9CDA-6E251C067218}
+		SolutionGuid = {3959D43F-A778-4449-BBB9-80D9C90603A1}
 	EndGlobalSection
 EndGlobal

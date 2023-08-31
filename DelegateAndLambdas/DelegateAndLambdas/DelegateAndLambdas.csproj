@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1A0E919-F402-442F-9879-4F9DE1B837AA}</ProjectGuid>
+    <ProjectGuid>{7F05188C-8B01-4FA6-B727-B05A557EAF16}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ThreadingSynchronization</RootNamespace>
-    <AssemblyName>ThreadingSynchronization</AssemblyName>
+    <RootNamespace>DelegateAndLambdas</RootNamespace>
+    <AssemblyName>DelegateAndLambdas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankAccount.cs" />
+    <Compile Include="GenericDelegates.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ThreadingSynchronization")]
+[assembly: AssemblyTitle("DelegateAndLambdas")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP")]
-[assembly: AssemblyProduct("ThreadingSynchronization")]
+[assembly: AssemblyProduct("DelegateAndLambdas")]
 [assembly: AssemblyCopyright("Copyright © HP 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c1a0e919-f402-442f-9879-4f9de1b837aa")]
+[assembly: Guid("7f05188c-8b01-4fa6-b727-b05a557eaf16")]
 
 // Version information for an assembly consists of the following four values:
 //
