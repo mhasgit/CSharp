@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO.Pipes;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,9 @@ namespace DelegateAndLambdas
             // MulticastDelegate();
             // TestDelToFuncMethod();
             // AnonymousDelegate();
-            // TestGenericDel();
+             TestGenericDel();
             // WorkingWithEvent();
-            TestBackAccount();
+            // TestBackAccount();
 
         }
         #region Delegate Basics
@@ -38,6 +39,9 @@ namespace DelegateAndLambdas
 
             Console.WriteLine("Predicate Del");
             genericDelegates.WorkingWithPredicate();
+
+            Console.WriteLine("Lambda expression Example");
+            genericDelegates.UsingLambdaWithLinq();
         }
 
         private static void AnonymousDelegate()
@@ -89,11 +93,11 @@ namespace DelegateAndLambdas
 
         #endregion
 
-        #region Even Basics
+        #region Event Basics
 
         public static void WorkingWithEvent()
         {
-            Timer timer = new Timer(5000);
+            Timer timer = new Timer(1000);
 
             timer.TimerTicked += (sender, e) =>
             {
@@ -118,5 +122,7 @@ namespace DelegateAndLambdas
 
 
         #endregion
+
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -34,6 +35,18 @@ namespace DelegateAndLambdas
             Predicate<int> isEven = number => number % 2 == 0;
             bool check = isEven(100);
             Console.WriteLine(check);
+        }
+
+        public void UsingLambdaWithLinq()
+        {
+            var numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            var evenNumbers = numbers.Where(n => n % 2 == 0 ).ToList();
+
+            foreach (var number in numbers)
+            {
+                Console.Write($" {number} ");
+            }
         }
     }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DelegateAndLambdas
 {
-    internal class Timer
+    internal class Timer : EventArgs
     {
         private int interval;
 
@@ -31,10 +31,12 @@ namespace DelegateAndLambdas
 
         protected virtual void OnTimerTicked()
         {
-            if (TimerTicked != null)
-            {
-                TimerTicked(this, EventArgs.Empty);
-            }
+            //if (TimerTicked != null)
+            //{
+            //    TimerTicked(this, EventArgs.Empty);
+            //}
+
+            TimerTicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }
