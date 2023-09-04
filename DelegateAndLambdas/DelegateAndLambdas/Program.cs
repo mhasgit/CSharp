@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO.Pipes;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
@@ -246,6 +247,10 @@ namespace DelegateAndLambdas
 
 
 
+        #endregion
+
+
+        #region MISCS
         #endregion
     }
 }

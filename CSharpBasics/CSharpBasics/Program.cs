@@ -6,13 +6,83 @@ using System.Threading.Tasks;
 
 namespace CSharpBasics
 {
+    public static class StringUtil
+    {
+        public static string Base64Encode(this string value)
+        {
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(value));
+        }
+    }
+
+    public static class EnumerableExtensionss
+    {
+        public static string MySelect<T>(this IEnumerable<T> value)
+        {
+            return string.Empty;
+        }
+    }
+
+
     public class Program
     {
+        private static Random random = new Random();
         public delegate void ShowMessage(string msg);
         public delegate void MessageReceived(string msg);
 
         public static void Main(string[] args)
         {
+            List<string> names = new List<string>()
+            {
+                RandomString(),
+                RandomString(),
+                RandomString(),
+                RandomString(),
+                RandomString(),
+                RandomString(),
+                RandomString(),
+                RandomString(),
+                RandomString(),
+            };
+
+            var visaApplication = new
+            {
+                ApplicationId = 123123,
+                ApplicantName = "Muhammad Hassan",
+                VisaType = "Umra",
+                Duration = TimeSpan.FromDays(90),
+                ValidUntil = DateTime.Now.AddDays(90)
+            };
+
+            Console.WriteLine(visaApplication.GetType().Name);
+
+            var a1 = new { X = 1, Y = 4 };
+            var a2 = new { X = 1, Y = 4 };
+            Console.WriteLine(a1.GetType() == a2.GetType());
+            
+            Console.WriteLine(visaApplication.GetType().Name);
+
+
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
+
+            Console.ReadLine();
+
+
+
+            string personalDetails = "Muhammad Hassan";
+            personalDetails.Base64Encode();
+
+            Console.WriteLine(StringUtil.Base64Encode(personalDetails));
+
+
+
+            // Func<int, int> addOne = delegate (int xxx) { return xxx + 1; };
+            Func<int, int> addOne = xxx  => xxx + 1;
+
+
+
 
             int? x = null;
             DateTime? now = null; // DateTime.Now;
@@ -37,6 +107,32 @@ namespace CSharpBasics
             del.Invoke("message");
         }
 
+
+        public static string RandomString(int length = 10)
+        {
+            char[] chars = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
+            StringBuilder sb = new StringBuilder();
+
+            string randomString = string.Empty;
+
+            for(int i = 0; i < length; i++)
+            {
+                char randomChar = chars[random.Next(i, chars.Length - 1)];
+                if (i == 0)
+                {
+                    sb.Append(char.ToUpper(randomChar));
+                    randomString += char.ToUpper(randomChar);
+                }
+                else
+                {
+                    sb.Append(random);
+                    randomString += randomChar;
+                }
+            }
+
+            return sb.ToString();
+        }
+
         public static void ShowFirstName(string msg)
         {
             Console.WriteLine(msg);
@@ -58,7 +154,7 @@ namespace CSharpBasics
 
             AddOne(ref value);
 
-            if (int.TryParse("123123", out value)) 
+            if (int.TryParse("123123", out value))
             {
                 Console.WriteLine(value);
             }
@@ -76,7 +172,7 @@ namespace CSharpBasics
         }
     }
 
-    class Person 
+    class Person
     {
         public int Id { get; set; }
     }
@@ -88,9 +184,9 @@ namespace CSharpBasics
             int x = 10;
             int y = 20;
             // int y = x;
-            if(x == y) { } // compares the values inside the bytes
+            if (x == y) { } // compares the values inside the bytes
 
-            Person p1 = new Person() {  Id = 1 };
+            Person p1 = new Person() { Id = 1 };
             Person p2 = new Person() { Id = 2 };
 
             // Person p2 = p1;
@@ -99,7 +195,7 @@ namespace CSharpBasics
             String s1 = "xx";
             String s2 = "xx";
 
-            if(s1 == s2) { } // T or F
+            if (s1 == s2) { } // T or F
 
 
             Console.WriteLine($"{x}, {y}"); // 10, 20
@@ -144,7 +240,7 @@ namespace CSharpBasics
         }
 
         // // Pass by reference - no copy is created
-        static void AddRef(ref int a,ref int b)
+        static void AddRef(ref int a, ref int b)
         {
             a = 20;
             b = 30;
