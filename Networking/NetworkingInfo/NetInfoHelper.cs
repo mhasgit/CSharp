@@ -38,6 +38,7 @@ namespace NetworkingInfo
                 // Convert.ToString(macBytes[0], 16);
 
                 IPInterfaceStatistics nicStats = nic.GetIPStatistics();
+                
             }
         }
     }
