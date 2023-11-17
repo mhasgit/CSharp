@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace CSharpBasics
 {
@@ -31,6 +32,15 @@ namespace CSharpBasics
 
         public static void Main(string[] args)
         {
+            var builder = new SqlConnectionStringBuilder();
+            builder.DataSource = ".";
+            builder.InitialCatalog = "TestDb";
+            builder.MultipleActiveResultSets = true;
+            builder.IntegratedSecurity = true;
+
+            Console.WriteLine(builder.ToString());
+            Console.ReadLine();
+
             List<string> names = new List<string>()
             {
                 RandomString(),
