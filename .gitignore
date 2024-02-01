@@ -36,3 +36,10 @@ msbuild.wrn
 # Visual Studio 2015
 .vs/
 /obj/
+BCL/.vs/BCL/DesignTimeBuild/.dtbcache.v2
+BCL/.vs/BCL/DesignTimeBuild/.dtbcache.v2
+BCL/.vs/BCL/v17/.suo
+*.props
+*.cache
+*.v2
+*.v2

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#\\BCL\\BCL\\BCL.csproj",
+      "projectUniqueName": "D:\\Code\\CSharp\\BCL\\BCL\\BCL.csproj",
       "projectName": "BCL",
-      "projectPath": "C:\\C#\\BCL\\BCL\\BCL.csproj",
+      "projectPath": "D:\\Code\\CSharp\\BCL\\BCL\\BCL.csproj",
       "packagesPath": "C:\\Users\\hassa\\.nuget\\packages\\",
-      "outputPath": "C:\\C#\\BCL\\BCL\\obj\\",
+      "outputPath": "D:\\Code\\CSharp\\BCL\\BCL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hassa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

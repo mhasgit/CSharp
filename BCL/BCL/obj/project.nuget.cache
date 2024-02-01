@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xb1uCvYl6KVVKPOl9PvNEbxROQJb+4CiYl7MzDgU6YICjNrWn9Qr6lrMbWig9ctdvDHltjXGt0hMgsKEhf8+ew==",
+  "dgSpecHash": "/t6nxU0jOPASUdou0erLHqkqlocg8pVJ9AXivdSInZbR5zglYpGCFfg/m/HJKsUOioeuXnt3m+k3xQ3/k3krCA==",
   "success": true,
-  "projectFilePath": "C:\\C#\\BCL\\BCL\\BCL.csproj",
+  "projectFilePath": "D:\\Code\\CSharp\\BCL\\BCL\\BCL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
