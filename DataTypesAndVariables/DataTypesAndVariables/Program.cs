@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            DecimalDataType();
+            // MinMaxValues();
+
+            //FormatingWithToString();
+
+            // DecimalDataType();
         }
 
         static void MinMaxValues()
@@ -47,7 +51,7 @@
             Console.WriteLine("Rounded to 4 decimal places, this value is {0}", decimal.Round(totalAmount, 4));
             Console.WriteLine();
 
-            totalAmount = -45.61M;
+            totalAmount = 45.61M;
 
             Console.WriteLine("Profit last month was {0}", totalAmount);
 

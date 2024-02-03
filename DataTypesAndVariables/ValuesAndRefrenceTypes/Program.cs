@@ -4,11 +4,12 @@
     {
         static void Main(string[] args)
         {
-            ValuesAndRefrenceTypes();
+            
+            // ValuesAndRefrenceTypes();
 
-            ConsEnumStructExamples();
+            // ConsEnumStructExamples();
 
-            TypeOperators();
+            // TypeOperators();
         }
 
         static void ValuesAndRefrenceTypes()
@@ -99,7 +100,7 @@
             author2.Title = "Sr. Consultant";
             author2.Company = "MCW Technologies";
 
-            Console.WriteLine("{0} {1} is a {2} with {3}", author1.FirstName, author1.LastName,
+            Console.WriteLine($"{author1.FirstName} {1} is a {2} with {3}", author1.LastName,
                                                            author1.Title, author1.Company);
 
             Console.WriteLine("{0} {1} is a {2} with {3}", author2.FirstName, author2.LastName,
@@ -115,7 +116,7 @@
                 Console.WriteLine("objectOne = {0} is type decimal", objectOne);
             }
 
-            objectOne = "Hassan";
+            objectOne = 12.12F;
             Console.WriteLine("objectOne is of type {0}", objectOne.GetType());
             
         }

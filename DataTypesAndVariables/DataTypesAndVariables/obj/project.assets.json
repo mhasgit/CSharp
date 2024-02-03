@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#\\DataTypesAndVariables\\DataTypesAndVariables\\DataTypesAndVariables.csproj",
+      "projectUniqueName": "C:\\Code\\C#\\DataTypesAndVariables\\DataTypesAndVariables\\DataTypesAndVariables.csproj",
       "projectName": "DataTypesAndVariables",
-      "projectPath": "C:\\C#\\DataTypesAndVariables\\DataTypesAndVariables\\DataTypesAndVariables.csproj",
+      "projectPath": "C:\\Code\\C#\\DataTypesAndVariables\\DataTypesAndVariables\\DataTypesAndVariables.csproj",
       "packagesPath": "C:\\Users\\hassa\\.nuget\\packages\\",
-      "outputPath": "C:\\C#\\DataTypesAndVariables\\DataTypesAndVariables\\obj\\",
+      "outputPath": "C:\\Code\\C#\\DataTypesAndVariables\\DataTypesAndVariables\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hassa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
