@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C#\\WorkingWithStrings\\WorkingWithStrings\\WorkingWithStrings.csproj",
+      "projectUniqueName": "D:\\Code\\CSharp\\CSharp\\WorkingWithStrings\\WorkingWithStrings\\WorkingWithStrings.csproj",
       "projectName": "WorkingWithStrings",
-      "projectPath": "C:\\C#\\WorkingWithStrings\\WorkingWithStrings\\WorkingWithStrings.csproj",
+      "projectPath": "D:\\Code\\CSharp\\CSharp\\WorkingWithStrings\\WorkingWithStrings\\WorkingWithStrings.csproj",
       "packagesPath": "C:\\Users\\hassa\\.nuget\\packages\\",
-      "outputPath": "C:\\C#\\WorkingWithStrings\\WorkingWithStrings\\obj\\",
+      "outputPath": "D:\\Code\\CSharp\\CSharp\\WorkingWithStrings\\WorkingWithStrings\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hassa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -61,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
