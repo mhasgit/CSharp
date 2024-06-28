@@ -1,5 +1,7 @@
-﻿using DependencyInjection;
+﻿using ConnectionServices;
+using DependencyInjection;
 using Ninject;
+using NugetPackages;
 using System.ComponentModel;
 
 //var warrior1 = new Samurai(new Sword());
@@ -20,3 +22,10 @@ bool useMeleeWeapons = true;
 IKernel kernel = new StandardKernel(new WeaponsModule(useMeleeWeapons));
 Samurai warrior = kernel.Get<Samurai>();
 warrior.Attack("the evildoers");
+
+ConsoleHelper.Print("Hi");
+ConsoleHelper.PrintNewLine();
+
+Student student = new Student(25, "Ali");
+
+student.StudentDetails();

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>DigInCodeOps.ConsoleHelpers</PackageId>
+    <Version>1.1.0</Version>
+    <Authors>Muhammad Hassan</Authors>
+    <Company>DigInCode Ops Ltd</Company>
+  </PropertyGroup>
+
+</Project>

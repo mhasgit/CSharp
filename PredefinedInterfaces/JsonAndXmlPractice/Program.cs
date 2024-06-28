@@ -80,6 +80,8 @@ namespace JsonAndXmlPractice
     {
         static void Main(string[] args)
         {
+            
+
             string locale = GetSupportedLocaleFromUser();
 
             CountriesService countriesService = new CountriesService();
